@@ -1,9 +1,14 @@
+#ifndef doublyHeader
+#define doublyHeader
+
 class DoublyList{
-  private:
+  
+//Instantiatiation 
+	private:
     ListNode *front;
     ListNode *back;
     unsigned int size;
-  public:
+	public:
     DoublyList();
     ~DoublyList();
     void insertFront(int d);
@@ -17,3 +22,4 @@ class DoublyList{
     bool isEmpty();
     unsigned int getSize();
 };
+#endif
