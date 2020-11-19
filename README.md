@@ -5,3 +5,8 @@
 
 # Instructions to Run Makefile:
 # Name to run: "hw4"
+
+# References 
+# http://www.cplusplus.com/doc/tutorial/templates/
+# https://www.geeksforgeeks.org/queue-cpp-stl/
+# https://www.tutorialspoint.com/cpp_standard_library/queue.htm
