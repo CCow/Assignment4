@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 #include "DoublyList.h"
 #include "DoublyList.cpp"
 
@@ -13,15 +14,15 @@ int main(int argc, char **argv){
 	int windowMean = 0;
 	int windowTime = 0;
 	int windowTimeFive = 0;
-	
+
 	string fileLocation;
-	
-	cout << "Input text file location:" ;
-	cin >> fileLocation;
-	if(fileLocation.length = 0){
-		cout << "Error!";
-    }
-  
+
+  cout << "Input text file location: ";
+  cin >> fileLocation;
+  if(fileLocation.length = 0){
+      cout << "Error!";
+  }
+
   cout << "The mean student wait time is: " << studentMean << endl;
   cout << "The median student wait time is: " << studentMedian << endl;
   cout << "The longest student wait time is: " << studentTime << endl;
