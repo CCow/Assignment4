@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include "DoublyList.h"
+#include "DoublyList.cpp"
 
 using namespace std;
 
@@ -12,16 +13,26 @@ int main(int argc, char **argv){
 	int windowMean = 0;
 	int windowTime = 0;
 	int windowTimeFive = 0;
-    cout << "The mean student wait time is: " << studentMean << endl;
-    cout << "The median student wait time is: " << studentMedian << endl;
-    cout << "The longest student wait time is: " << studentTime << endl;
-    cout << "The number of students waiting over 10 minutes is: " << studentTimeTen << endl;
-    cout << "The mean window idle time is: " << windowMean << endl;
-    cout << "The longest window idle time is: " << windowTime << endl;
-    cout << "The number of windows idle for over 5 minutes is: " << windowTimeFive << endl;
-    return 0;
-}
+	
+	string fileLocation;
+	
+	cout << "Input text file location:" ;
+	cin >> fileLocation;
+	if(fileLocation.length = 0){
+		cout << "Error!";
+    }
+  
+  cout << "The mean student wait time is: " << studentMean << endl;
+  cout << "The median student wait time is: " << studentMedian << endl;
+  cout << "The longest student wait time is: " << studentTime << endl;
+  cout << "The number of students waiting over 10 minutes is: " << studentTimeTen << endl;
+  cout << "The mean window idle time is: " << windowMean << endl;
+  cout << "The longest window idle time is: " << windowTime << endl;
+  cout << "The number of windows idle for over 5 minutes is: " << windowTimeFive << endl;
 
+  return 0;
+}
+/*
 DoublyList::DoublyList(){
   front = NULL;
   back = NULL;
@@ -29,7 +40,7 @@ DoublyList::DoublyList(){
 }
 
 DoublyList::~DoublyList(){
-//to fill
+  //to fill
 }
 
 void DoublyList::insertFront(int d){
@@ -37,17 +48,21 @@ void DoublyList::insertFront(int d){
     if(size == 0){
       back = node;
     }
-    node->next = front;
+    else{
+      front->prev = node;
+      node->next = front;
+    }
     front = node;
     ++size;
 }
 
 void DoublyList::insertBack(int d){
   ListNode *node = new ListNode(d);
-  if(front ++ NULL){
+  if(front == NULL){
     front = back;
   }
   else{
+    node->prev = back;
     back->next = node;
   }
   back = node;
@@ -81,16 +96,21 @@ int DoublyList::find(int value){
 }
 
 int DoublyList::deletePos(int pos){
-  int p = 0;
-  ListNode *curr = front;
-  ListNode * prev = front;
-  while(p != pos){
-    prev = curr;
-    curr = curr->next;
-    p++;
+  if(size > 0){
+    int p = 0;
+    ListNode *curr = front;
+    ListNode * prev = front;
+    while(p != pos){
+      prev = curr;
+      curr = curr->next;
+      p++;
+    }
+  }
+  else{
+    //hope this doesn't happen
+    return 0;
   }
   //found correct position, continue with removal
-
   prev->next = curr->next;
   curr->next = NULL;
   int temp = curr->data;
@@ -130,3 +150,4 @@ int DoublyList::removeBack(){
   }
   back = back->prev;
 }
+*/
