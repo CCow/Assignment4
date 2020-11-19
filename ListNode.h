@@ -27,4 +27,4 @@ ListNode::ListNode(temp d){
 
 ListNode::~ListNode(temp d){
   delete data;
-}
+};
