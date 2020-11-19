@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-template <class temp>
+template <class temp> http://www.cplusplus.com/doc/tutorial/templates/
 class ListNode{
   public:
     ListNode();
@@ -12,7 +12,6 @@ class ListNode{
     ListNode *prev;
 
     temp data;
-
 };
 
 ListNode::ListNode(){

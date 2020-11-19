@@ -1,8 +1,10 @@
+//Doubly Linked List file - https://www.geeksforgeeks.org/queue-cpp-stl/ for structure setup
+//Template type elements (member types)- https://www.tutorialspoint.com/cpp_standard_library/queue.htm
 #include <iostream>
 #include "ListNode.h"
 using namespace std;
 
-template <class temp>
+template <class temp> //http://www.cplusplus.com/doc/tutorial/templates/ - "template <class T>"
 class DoublyList{
   public:
     DoublyList();
@@ -33,7 +35,7 @@ DoublyList<temp>::DoublyList(){
 
 template <class temp>
 DoublyList<temp>::~DoublyList(){
-  //to fill
+  delete ;
 }
 
 template <class temp>
